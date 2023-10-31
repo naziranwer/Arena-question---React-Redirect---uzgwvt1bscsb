@@ -27,6 +27,9 @@ function App() {
           <Route exact path="/profile">
             <Profile setIsUser={setIsUser} />
           </Route>
+          <Route exact path="*">
+            <PageNotFound/>
+          </Route>
         </Switch>
       </Router>
     </div>

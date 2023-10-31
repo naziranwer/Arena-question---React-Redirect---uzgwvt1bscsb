@@ -3,6 +3,7 @@ import { Redirect, Link } from "react-router-dom";
 const Profile = ({ setIsUser }) => {
   const onButtonClick = () => {
     setIsUser(false);
+    
   };
   return (
     <div id="profilePage">
