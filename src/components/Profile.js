@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Redirect, Link } from "react-router-dom";
-const Profile = ({ setIsUser }) => {
+const Profile = ({ isUser, setIsUser }) => {
+  console.log(isUser);
+
+  if (!isUser) {
+    return <Redirect to="/login" />;
+  }
+
   const onButtonClick = () => {
     setIsUser(false);
-    
   };
   return (
     <div id="profilePage">

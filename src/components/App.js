@@ -14,6 +14,7 @@ import PageNotFound from "./PageNotFound";
 
 function App() {
   const [isUser, setIsUser] = useState(false);
+
   return (
     <div>
       <Router>
@@ -25,7 +26,7 @@ function App() {
             <Login setIsUser={setIsUser} />
           </Route>
           <Route exact path="/profile">
-            <Profile setIsUser={setIsUser} />
+            <Profile isUser={isUser} setIsUser={setIsUser} />
           </Route>
           <Route exact path="*">
             <PageNotFound/>
